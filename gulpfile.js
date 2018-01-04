@@ -11,7 +11,7 @@ const autoprefixer = require('gulp-autoprefixer');
 /*
   1. Create server for new Project (change server name and port number if needed)
 */
-gulp.task('connect', function() {
+gulp.task('connect', _ => {
   connect.server({
     name: 'media bulma server',
     root: 'dist',
@@ -21,35 +21,34 @@ gulp.task('connect', function() {
 });
 
 /*
-  2. Copy needed bootstrap, fontawesome, jquery files to dist folder
+  2. In first step copy bulma-extensions JS files to src/js/bulma,
+  in second step get copy all needed JS and fontawesome files to dist folder.
+  Remember to add needed JS files to HTML files.
 */
-gulp.task('copy-js', function(){
-	return gulp.src([
+gulp.task('bulma-js', _ => {
+	return gulp.src('node_modules/bulma-extensions/*/*.min.js')
+		.pipe(gulp.dest('src/js/bulma'))
+});
 
-	])
+
+gulp.task('copy-js', _ => {
+	return gulp.src()
 		.pipe(gulp.dest('dist/assets/js'))
 });
 
-gulp.task('copy-fonts', function(){
+gulp.task('copy-fonts', _ => {
   return gulp.src([
     'src/fonts/*/*'
   ])
     .pipe(gulp.dest('dist/assets/fonts'));
 });
 
-gulp.task('copy-css', function(){
-	return gulp.src([
-
-  ])
-		.pipe(gulp.dest('dist/assets/css'))
-});
-
-gulp.task('copy', ['copy-js', 'copy-fonts', 'copy-css']);
+gulp.task('copy', ['copy-js', 'copy-fonts']);
 
 /*
   3. Minify images and move to dist/img folder
 */
-gulp.task('imagemin', function(){
+gulp.task('imagemin', _ => {
   return gulp.src('src/img/*')
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
@@ -62,22 +61,22 @@ gulp.task('imagemin', function(){
   4 - Compile HTML, SCSS and JS files and move to distribution folder (dist/js and dist/css),
   and do live reload on browser
 */
-gulp.task('html', function(){
+gulp.task('html', _ => {
   return gulp.src('src/*.html')
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
 
-gulp.task('js', function(){
+gulp.task('js', _ => {
   return gulp.src('src/js/*.js')
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(connect.reload());
 });
 
-gulp.task('sass', function(){
-  return gulp.src('src/scss/main.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    // .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+gulp.task('sass', _ => {
+  return gulp.src('src/scss/*.scss')
+    // .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: [
           "last 2 versions"
@@ -90,9 +89,9 @@ gulp.task('sass', function(){
 /*
   4 - Watch for changes in source project files
 */
-gulp.task('watch', function () {
+gulp.task('watch', _ => {
   gulp.watch('src/*.html', ['html']);
-  gulp.watch('src/scss/main.scss', ['sass']);
+  gulp.watch('src/scss/*.scss', ['sass']);
   gulp.watch('src/js/*.js', ['js']);
 });
 
@@ -104,7 +103,7 @@ gulp.task('default', ['connect', 'html', 'sass', 'js', 'watch']);
 /*
   6. Copy dist folder to docs folder for github pages
 */
-gulp.task('docs', function(){
+gulp.task('docs', _ => {
   return gulp.src([
     'dist/*.html',
     'dist/*/*',
