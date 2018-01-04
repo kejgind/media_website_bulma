@@ -1,0 +1,31 @@
+{
+  "name": "media_website_bulma",
+  "version": "1.0.0",
+  "description": "Multi page website with bulma css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kejgind/media_website_bulma.git"
+  },
+  "author": "Krzysztof Garbowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kejgind/media_website_bulma/issues"
+  },
+  "homepage": "https://github.com/kejgind/media_website_bulma#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-connect": "^5.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "bulma": "^0.6.1",
+    "bulma-extensions": "^0.5.2"
+  }
+}
