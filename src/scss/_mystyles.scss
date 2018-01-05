@@ -1,0 +1,190 @@
+#hero {
+	background-image: url('../img/hero-bg.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	img {
+		height: 80%;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.plans {
+		display: flex;
+		justify-content: space-around;
+		@media screen and (max-width:568px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.plan {
+		background-color: $grey-dark;
+		position: relative;
+		margin: 2rem 0 2rem;
+		display: flex;
+		flex-direction: column;
+		height: 7rem;
+		@media screen and (max-width:568px) {
+			width: 100%;
+		}
+		width: 25%;
+		&-go {
+			background-color: $orange-new;
+		}
+		&-price {
+			background-color: $black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 70px;
+			width: 70px;
+			border-radius: 50%;
+			position: absolute;
+			bottom: -35px;
+			left: 50%;
+			margin-left: -35px;
+		}
+		h3 {
+			margin: 1rem 0 0;
+		}
+	}
+}
+#subscribe {
+	background-color: $grey-dark;
+	padding: 1.5rem 1.5rem;
+	p {
+		color: $white;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+#modal {
+	.modal-card-head,
+	.modal-card-body,
+	.modal-card-foot {
+		background-image: url('../img/tile.jpg');
+		background-repeat: repeat;
+	}
+	.field {
+		margin-top: 1rem;
+	}
+}
+
+#boost,
+#final-feat,
+#kudos {
+	background-image: url('../img/tile.jpg');
+	background-repeat: repeat;
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+#benefits,
+#features {
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
+	figure,
+	.title {
+		align-self: center;
+	}
+}
+
+#features {
+	background-color: $grey-dark;
+}
+
+#final-feat {
+	.column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+#intro {
+	background-image: url('../img/stuff-bg.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#instructor {
+	background-image: url('../img/brad-elvis.png');
+	background-repeat: no-repeat;
+	background-position-x: 80%;
+	background-position-y: center;
+	.main-column{
+		background-color: rgba($white, 0.7);
+	}
+	.icon {
+		background-color: $grey-light;
+		border-radius: 50%;
+		color: $white;
+	}
+	.twitter:hover {
+		background-color: $twitter;
+	}
+	.facebook:hover {
+		background-color: $facebook;
+	}
+	.google:hover {
+		background-color: $google;
+	}
+	.numbers {
+		background-color: $orange-new;
+		border-radius: 50%;
+		height: 140px;
+		width: 140px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+#kudos {
+	img {
+		border-radius: 50%;
+	}
+	blockquote {
+		background: transparent;
+	}
+	blockquote,
+	.media {
+		border: none;
+	}
+	@media screen and (max-width: 568px){
+		.media {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+#signup {
+	background-image: url('../img/hipster-stuff.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	span {
+		border-bottom: $orange-new 3px solid;
+	}
+}
+
+.footer {
+	padding: 1.5rem 1.5rem;
+	.signup {
+		color: $orange-new;
+	}
+}

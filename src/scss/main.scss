@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*
+1.	Import the initial Bulma variables
+*/
+
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+/*
+2.	Set your own initial variables
+*/
+
+$section-padding: 5rem 1.5rem;
+
+//Setting my colors
+$orange-new: #dd5638;
+$twitter: #55acee;
+$facebook: #3b5998;
+$google: #db4b39;
+
+
+// Assigning my colors to Bulma colors
+$danger: $orange-new;
+$footer-background-color: $black-ter;
+
+// Add a serif family
+
+$family-serif: 'Raleway', Helvetica, sans-serif;
+
+/*
+3.	Set the derived variables
+*/
+
+$family-primary: $family-serif;
+
+/*
+4.	Setup your Custom Colors
+*/
+
+/*
+5.	Add new color variables to the color map.
+*/
+@import "../../node_modules/bulma/sass/utilities/derived-variables";
+
+/*
+6.	Import the rest of Bulma SASS files
+*/
+
+// 6.1 - Importing rest of Bulma utilities
+@import "../../node_modules/bulma/sass/utilities/animations";
+@import "../../node_modules/bulma/sass/utilities/mixins";
+@import "../../node_modules/bulma/sass/utilities/controls";
+
+// 6.2 - Importing Bulma base
+@import "../../node_modules/bulma/sass/base/minireset";
+@import "../../node_modules/bulma/sass/base/generic";
+@import "../../node_modules/bulma/sass/base/helpers";
+
+// 6.3 - Importing Bulma elements
+@import "../../node_modules/bulma/sass/elements/box";
+@import "../../node_modules/bulma/sass/elements/button";
+@import "../../node_modules/bulma/sass/elements/container";
+@import "../../node_modules/bulma/sass/elements/content";
+@import "../../node_modules/bulma/sass/elements/form";
+@import "../../node_modules/bulma/sass/elements/icon";
+@import "../../node_modules/bulma/sass/elements/image";
+@import "../../node_modules/bulma/sass/elements/notification";
+@import "../../node_modules/bulma/sass/elements/progress";
+@import "../../node_modules/bulma/sass/elements/table";
+@import "../../node_modules/bulma/sass/elements/tag";
+@import "../../node_modules/bulma/sass/elements/title";
+@import "../../node_modules/bulma/sass/elements/other";
+
+// 6.4 - Importing Bulma components
+@import "../../node_modules/bulma/sass/components/breadcrumb";
+@import "../../node_modules/bulma/sass/components/card";
+@import "../../node_modules/bulma/sass/components/dropdown";
+@import "../../node_modules/bulma/sass/components/level";
+@import "../../node_modules/bulma/sass/components/media";
+@import "../../node_modules/bulma/sass/components/menu";
+@import "../../node_modules/bulma/sass/components/message";
+@import "../../node_modules/bulma/sass/components/modal";
+@import "../../node_modules/bulma/sass/components/navbar";
+@import "../../node_modules/bulma/sass/components/pagination";
+@import "../../node_modules/bulma/sass/components/panel";
+@import "../../node_modules/bulma/sass/components/tabs";
+
+// 6.5 - Importing Bulma grid
+@import "../../node_modules/bulma/sass/grid/columns";
+@import "../../node_modules/bulma/sass/grid/tiles";
+
+// 6.6 - Importing Bulma layout
+@import "../../node_modules/bulma/sass/layout/hero";
+@import "../../node_modules/bulma/sass/layout/section";
+@import "../../node_modules/bulma/sass/layout/footer";
+
+/*
+7.	Import Bulma-extensions SASS files (choose those You need,
+		if there is a need of changing those files,
+		the best way would be to add them to src/scss/bulma folder)
+*/
+@import "../../node_modules/bulma-extensions/bulma-accordion/accordion";
+@import "../../node_modules/bulma-extensions/bulma-badge/badge";
+@import "../../node_modules/bulma-extensions/bulma-calendar/calendar";
+@import "../../node_modules/bulma-extensions/bulma-carousel/carousel";
+@import "../../node_modules/bulma-extensions/bulma-checkradio/checkradio";
+@import "../../node_modules/bulma-extensions/bulma-divider/divider";
+@import "../../node_modules/bulma-extensions/bulma-iconpicker/iconPicker";
+@import "../../node_modules/bulma-extensions/bulma-pageloader/pageloader";
+@import "../../node_modules/bulma-extensions/bulma-pricingtable/pricing-table";
+@import "../../node_modules/bulma-extensions/bulma-quickview/quickview";
+@import "../../node_modules/bulma-extensions/bulma-slider/slider";
+@import "../../node_modules/bulma-extensions/bulma-steps/steps";
+@import "../../node_modules/bulma-extensions/bulma-switch/switch";
+@import "../../node_modules/bulma-extensions/bulma-tagsinput/tagsinput";
+@import "../../node_modules/bulma-extensions/bulma-timeline/timeline";
+@import "../../node_modules/bulma-extensions/bulma-tooltip/tooltip";
+
+// 8. My custom styles
+
+@import "mystyles";
+
