@@ -29,7 +29,7 @@
 		}
 		width: 25%;
 		&-go {
-			background-color: $orange-new;
+			background-color: $danger;
 		}
 		&-price {
 			background-color: $black;
@@ -72,9 +72,7 @@
 	}
 }
 
-#boost,
-#final-feat,
-#kudos {
+#boost {
 	background-image: url('../img/tile.jpg');
 	background-repeat: repeat;
 	.content {
@@ -101,6 +99,7 @@
 }
 
 #final-feat {
+	@extend #boost;
 	.column {
 		display: flex;
 		flex-direction: column;
@@ -109,11 +108,8 @@
 }
 
 #intro {
+	@extend #hero;
 	background-image: url('../img/stuff-bg.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 #instructor {
@@ -139,7 +135,7 @@
 		background-color: $google;
 	}
 	.numbers {
-		background-color: $orange-new;
+		background-color: $danger;
 		border-radius: 50%;
 		height: 140px;
 		width: 140px;
@@ -152,6 +148,7 @@
 
 
 #kudos {
+	@extend #boost;
 	img {
 		border-radius: 50%;
 	}
@@ -172,19 +169,48 @@
 }
 
 #signup {
+	@extend #hero;
 	background-image: url('../img/hipster-stuff.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	span {
-		border-bottom: $orange-new 3px solid;
+		border-bottom: $danger 3px solid;
 	}
 }
 
 .footer {
 	padding: 1.5rem 1.5rem;
 	.signup {
-		color: $orange-new;
+		color: $danger;
+		&:hover {
+			font-weight: 700;
+		}
 	}
+}
+
+// BLOG
+
+#hero-sub {
+	@extend #signup;
+	background-position: top center;
+}
+
+#posts {
+	@extend #boost;
+	.card-header-icon {
+		background-color: $primary;
+		border-radius: 50%;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 55px;
+		width: 55px;
+		&:hover {
+			background-color: darken($primary, 10%);
+		}
+	}
+	.card {
+		margin-bottom: 3rem;
+	}
+
 }
