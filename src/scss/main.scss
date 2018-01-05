@@ -2,6 +2,7 @@
 /*
 1.	Import the initial Bulma variables
 */
+
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../node_modules/bulma/sass/utilities/functions";
 
@@ -12,18 +13,25 @@
 $section-padding: 5rem 1.5rem;
 
 //Setting my colors
+$orange-new: #dd5638;
+$twitter: #55acee;
+$facebook: #3b5998;
+$google: #db4b39;
 
 
 // Assigning my colors to Bulma colors
-
+$danger: $orange-new;
+$footer-background-color: $black-ter;
 
 // Add a serif family
 
+$family-serif: 'Raleway', Helvetica, sans-serif;
 
 /*
 3.	Set the derived variables
 */
 
+$family-primary: $family-serif;
 
 /*
 4.	Setup your Custom Colors
