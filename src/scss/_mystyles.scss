@@ -1,0 +1,71 @@
+#hero {
+	background-image: url('../img/hero-bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+// * {
+// 	outline: 1px red solid;
+// }
+
+.plan {
+	position: relative;
+	min-height: 7rem;
+	height: 100%;
+	&-price {
+		display: block;
+		padding: 20px 10px;
+		border-radius: 50%;
+		position: absolute;
+		bottom: -32px;
+		left: 50%;
+		margin-left: -35px;
+	}
+}
+
+#subscribe {
+	background-color: $dark;
+	padding: 1.5rem 1.5rem;
+	p {
+		color: $white;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+#modal {
+	.modal-card-head,
+	.modal-card-body,
+	.modal-card-foot {
+		background-image: url('../img/tile.jpg');
+		background-repeat: repeat;
+	}
+	.field {
+		margin-top: 1rem;
+	}
+}
+
+#boost {
+	background-image: url('../img/tile.jpg');
+	background-repeat: repeat;
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+#benefits {
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
+	figure,
+	.title {
+		align-self: center;
+	}
+}
+
