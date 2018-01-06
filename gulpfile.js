@@ -75,13 +75,14 @@ gulp.task('js', _ => {
 
 gulp.task('sass', _ => {
   return gulp.src('src/scss/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    // .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: [
-          "last 2 versions"
+          "last 10 versions"
         ]
     }))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    // .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(connect.reload());
 });

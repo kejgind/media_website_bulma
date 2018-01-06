@@ -184,6 +184,12 @@
 			font-weight: 700;
 		}
 	}
+	&-nav a {
+		color: $white;
+		&:hover {
+		color: $orange-new-dark;
+		}
+	}
 }
 
 // BLOG
