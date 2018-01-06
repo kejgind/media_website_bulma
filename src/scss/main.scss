@@ -14,6 +14,7 @@ $section-padding: 5rem 1.5rem;
 
 //Setting my colors
 $orange-new: #dd5638;
+$orange-new-dark: darken($orange-new, 15%);
 $twitter: #55acee;
 $facebook: #3b5998;
 $google: #db4b39;
@@ -21,6 +22,8 @@ $google: #db4b39;
 
 // Assigning my colors to Bulma colors
 $danger: $orange-new;
+$link: $orange-new;
+$link-hover: $orange-new-dark;
 $footer-background-color: $black-ter;
 
 // Add a serif family
