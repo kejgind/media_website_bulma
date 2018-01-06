@@ -226,14 +226,21 @@
 // RESOURCES
 
 #hero-res {
-	// @extend #hero;
+	@extend #hero;
 	background-image: url('../img/stuff-feature.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 #resources {
+	@extend #boost;
+}
+
+
+// CONTACT
+
+#hero-contact {
+	@extend #hero-res;
+}
+
+#contact-form {
 	@extend #boost;
 }
